@@ -58,3 +58,30 @@ function play(playerSelection, computerSelection){
        }
     }
 }
+
+function game(){
+   let player=0,computer=0;
+   for(let i=0;i<5;i++){
+       let result = play();
+       if(result==0){
+           player++;
+           computer++;
+       }
+       if(result==1){
+           player++;
+       }
+       if(result==2){
+           computer++;
+       }
+   }
+   console.log("Final Score: " + player + ":" + computer);
+   if(player>computer){
+       console.log("You win!");
+   }
+   else if(player<computer){
+       console.log("You lose!");
+   }
+   else if(player==computer){
+       console.log("It's a draw!");
+   }
+}
