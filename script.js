@@ -29,4 +29,32 @@ function play(playerSelection, computerSelection){
            return 1;
        }
    }
+   if(playerSelection === "PAPER"){
+       if(computerSelection === "ROCK"){
+           console.log("You win! Paper beats Rock.");
+           return 1;
+       }
+       else if(computerSelection === "PAPER"){
+           console.log("It's a draw! Paper vs Paper.");
+           return 0;
+       }
+       else if(computerSelection === "SCISSORS"){
+           console.log("You lose! Scissors beat Rock.");
+           return 2;
+       }
+   }
+    if(playerSelection === "SCISSORS"){
+       if(computerSelection === "ROCK"){
+           console.log("You Lose! Rock beats Scissors.");
+           return 2;
+       }
+       else if(computerSelection === "PAPER"){
+           console.log("You win! Scissors beat paper.");
+           return 1;
+       }
+       else if(computerSelection === "SCISSORS"){
+           console.log("It's a draw! Scissors vs Scissors.");
+           return 0;
+       }
+    }
 }
